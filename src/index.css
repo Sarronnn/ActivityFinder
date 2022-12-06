@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.business {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: linen;
+  padding: 8px;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.business_name {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.business_address {
+  font-style: italic;
+}
+
+.business_image {
+  padding: 10px;
+}
