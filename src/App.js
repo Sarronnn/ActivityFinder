@@ -6,7 +6,7 @@ export default function App() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('https://classproxy.rtoal.repl.co/meghan?location="Los Angeles"')
+    fetch('https://classproxy.rtoal.repl.co/yts?term=Starbucks')
       .then((r) => r.json())
       .then((r) => setData(r))
       .catch((e) => setData(e));
@@ -14,6 +14,12 @@ export default function App() {
 
   return (
     <div className="App">  
+      <header className="app_header">
+        Activity Finder
+      </header>
+      <nav className="saved_lists">
+        Favorites
+      </nav>
       <section>
         {
           !data ? <li>No businesses yet</li> :
