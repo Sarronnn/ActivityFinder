@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  -ms-flex-align: center;
+  background-color: antiquewhite;
+  font-family: "Times New Roman", Times, serif;
+}
+searchBar {
+  text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -17,6 +24,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
+  font-size: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -35,4 +43,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+button {
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(230, 187, 230);
+  font: 700 11px system-ui;
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 10px 7px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(106, 35, 35) rgb(209, 209, 209) rgb(186, 186, 186);
 }

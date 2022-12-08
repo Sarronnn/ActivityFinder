@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "./SearchBar.js";
-
+import favorites from "./favorites";
 export default function App() {
-  // const [id, setId] = useState("");
   const [data, setData] = useState("");
   const [name, setName] = useState("");
-  const [favorite, setFavorite] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     const url = `https://classproxy.rtoal.repl.co/yts?term=${name}`;
     fetch(url)
@@ -18,10 +17,12 @@ export default function App() {
   return (
     <div className="App">
       <header className="app_header">Activity Finder</header>
-      <nav className="saved_lists">Favorites</nav>
-      <label for="search">Search Here</label>
+      <button onClick={favorites}>Favorites</button>
       <p></p>
-      <SearchBar action={setName} />
+      <div>
+        <p></p>
+        <SearchBar action={setName} />
+      </div>
       <section>
         {!data ? (
           <li>No businesses yet</li>
