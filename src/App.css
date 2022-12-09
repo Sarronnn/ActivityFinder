@@ -2,9 +2,11 @@
   text-align: center;
   -ms-flex-align: center;
   background-color: antiquewhite;
+
+  height: 100px;
   font-family: "Times New Roman", Times, serif;
 }
-searchBar {
+.SearchBar {
   text-align: center;
   background-color: black;
 }
@@ -55,4 +57,8 @@ button {
   border-width: 1px;
   border-style: solid;
   border-color: rgb(106, 35, 35) rgb(209, 209, 209) rgb(186, 186, 186);
+}
+.addFav {
+  text-align: center;
+  background-color: rgb(44, 80, 89);
 }

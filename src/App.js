@@ -6,6 +6,8 @@ export default function App() {
   const [data, setData] = useState("");
   const [name, setName] = useState("");
   const [favorites, setFavorites] = useState([]);
+  const [toggle, setToggle] = useState(true);
+  const toggleChecked = () => setToggle((toggle) => !toggle);
   useEffect(() => {
     const url = `https://classproxy.rtoal.repl.co/yts?term=${name}`;
     fetch(url)
@@ -17,10 +19,14 @@ export default function App() {
   return (
     <div className="App">
       <header className="app_header">Activity Finder</header>
-      <button onClick={favorites}>Favorites</button>
-      <p></p>
+      <button id="tabFav" onClick={favorites}>
+        Favorites
+      </button>
+      <button id="tabSearch"> Search </button>
+
       <div>
         <p></p>
+        <p>Type search here:</p>
         <SearchBar action={setName} />
       </div>
       <section>
@@ -44,6 +50,7 @@ export default function App() {
               <div className="business_image">
                 <img src={business.image_url} width="125" />
               </div>
+              <div></div>
             </div>
           ))
         )}

@@ -15,7 +15,7 @@ export default function SearchBar({ action }) {
     <form onSubmit={submit}>
       <input
         type="text"
-        placeholder="Search here"
+        placeholder="Search for an activity "
         onChange={handleChange}
         value={searchInput}
       />
