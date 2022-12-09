@@ -50,7 +50,11 @@ export default function App() {
               <div className="business_image">
                 <img src={business.image_url} width="125" />
               </div>
-              <div></div>
+              <div>
+                <button id="addFav" onClick={favorites}>
+                  Favorites
+                </button>
+              </div>
             </div>
           ))
         )}
