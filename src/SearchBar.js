@@ -12,8 +12,9 @@ export default function SearchBar({ action }) {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form className="search-box" style={{ width: "100%" }} onSubmit={submit}>
       <input
+        className="search-bar"
         type="text"
         placeholder="Search for an activity "
         onChange={handleChange}

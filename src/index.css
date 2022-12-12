@@ -35,13 +35,19 @@ section {
 
 .business {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   margin: 10px;
-  background-color: linen;
-  padding: 8px;
-  text-align: left;
+  background-color: rgba(65, 5, 66,0.5);
+  padding: 20px;
+  text-align:center;
   border-radius: 15px;
+  color:white;
+  width:300px;
+  min-height:400px;
+  font-size:25px;
 }
 
 .business_name {
@@ -53,6 +59,8 @@ section {
   font-style: italic;
 }
 
-.business_image {
-  padding: 10px;
+.business_image img {
+  width:290px;
+  height:170px;
+  border-radius:15px;
 }

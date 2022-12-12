@@ -2,60 +2,44 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "./SearchBar.js";
 import favorites from "./favorites";
+import Card from "./Card";
 export default function App() {
   const [data, setData] = useState("");
   const [name, setName] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [toggle, setToggle] = useState(true);
   const toggleChecked = () => setToggle((toggle) => !toggle);
+
   useEffect(() => {
     const url = `https://classproxy.rtoal.repl.co/yts?term=${name}`;
     fetch(url)
       .then((r) => r.json())
-      .then((r) => setData(r))
+      .then((r) => {
+        console.log(r);
+
+        setData(r);
+      })
       .catch((e) => setData(e));
   }, [name]);
 
   return (
     <div className="App">
-      <header className="app_header">Activity Finder</header>
+      <header className="App-header">Activity Finder</header>
+
+      <SearchBar action={setName} />
+      {/*
       <button id="tabFav" onClick={favorites}>
         Favorites
       </button>
       <button id="tabSearch"> Search </button>
-
-      <div>
-        <p></p>
-        <p>Type search here:</p>
-        <SearchBar action={setName} />
-      </div>
-      <section>
+ 
+  */}
+      <section className="cards-container">
         {!data ? (
           <li>No businesses yet</li>
         ) : (
           data?.businesses?.map((business) => (
-            <div className="business" key={business.id}>
-              <div>
-                <div className="business_name">{business.name}</div>
-                <div>{business.price}</div>
-                <div className="business_address">
-                  <div>{business.location.address1}</div>
-                  <div>{business.location.address2}</div>
-                  <div>{business.location.address3}</div>
-                  <div>{business.location.city}</div>
-                </div>
-                <div>{business.display_phone}</div>
-                <div>Rating: {business.rating}/5</div>
-              </div>
-              <div className="business_image">
-                <img src={business.image_url} width="125" />
-              </div>
-              <div>
-                <button id="addFav" onClick={favorites}>
-                  Favorites
-                </button>
-              </div>
-            </div>
+            <Card business={business} key={business.id} />
           ))
         )}
       </section>
