@@ -12,7 +12,7 @@ export async function fetchFavorites() {
     const snapshot = await getDocs(
         query(collection(db, "favorites"), orderBy("name", "desc"))
     )
-
+console.log(snapshot)
     return snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),

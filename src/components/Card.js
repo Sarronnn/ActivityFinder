@@ -16,7 +16,7 @@ export default function Card({ business }) {
         </div>
         <div>{business.display_phone}</div>
         <div>Rating: {business.rating}/5</div>
-        <button onClick={writeFavoriteToDatabase}>❤️</button>
+        <button onClick={()=>writeFavoriteToDatabase(business)}>❤️</button>
       </div>
     </div>
   );
