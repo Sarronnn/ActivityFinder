@@ -7,7 +7,9 @@ We created this app to help students discover new activities, events & venues to
 To create Activity Finder, we used a React app, which employed HTML, CSS, and Javascript. We also used Yelp Fusion API (see the link below for information) and Replit, which upon input from the search bar, allowed us to display the activity's name, picture, address, phone number, and rating without showing the Yelp Fusion API key. We also used Firebase, which allows users to login with their Google accounts to gain access to Activity Finder, and Firestore, which stores favorited activities (to add a favorite, press the heart button).
 
 To visit Activity Finder Home Page, visit this link: https://activity-finder-db.web.app/
+
 To visit Activity Finder Favorites Page, visit this link: https://activity-finder-db.web.app/favorites
+
 Yelp Fusion API: https://docs.developer.yelp.com/reference/v3_business_search
 
 Looking for a place to eat some chicken wings? Search it up in the Activity Finder App and we will give you some of the best places that have wings around LA! Are you into drawing? Or art? Search those up top, and we will show you museums, and art studios. Any activity you can think of, Activity Finder will generate results!
