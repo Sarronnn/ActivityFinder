@@ -8,7 +8,7 @@ export async function writeFavoriteToDatabase({ name }) {
     return { id: docRef.id, ...activityInfo}
 }
 
-export async function fetchActivities() {
+export async function fetchFavorites() {
     const snapshot = await getDocs(
         query(collection(db, "favorites"), orderBy("name", "desc"))
     )
