@@ -1,7 +1,6 @@
+import { writeFavoriteToDatabase } from "../services/favoritesService.js"
+
 export default function Card({ business }) {
-  function addToFavorites() {
-    alert(`Saving${business.name}`);
-  }
   return (
     <div className="business">
       <h1 className="business_name">{business.name}</h1>
@@ -17,7 +16,7 @@ export default function Card({ business }) {
         </div>
         <div>{business.display_phone}</div>
         <div>Rating: {business.rating}/5</div>
-        <div onClick={addToFavorites}> ❤️ </div>
+        <button onClick={writeFavoriteToDatabase}>❤️</button>
       </div>
     </div>
   );

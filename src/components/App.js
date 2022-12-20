@@ -3,22 +3,22 @@ import "./App.css";
 import SearchBar from "../SearchBar.js";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import Card from "./Card";
+
 export default function App() {
   const [data, setData] = useState("");
   const [name, setName] = useState("");
-
   const user = useAuthentication();
+
   useEffect(() => {
     const url = `https://classproxy.rtoal.repl.co/yts?term=${name}`;
     fetch(url)
       .then((r) => r.json())
       .then((r) => {
         console.log(r);
-
         setData(r);
       })
       .catch((e) => setData(e));
-  }, [name]);
+  }, [name])
 
   return (
     <div className="App">
