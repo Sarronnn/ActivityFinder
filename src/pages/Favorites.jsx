@@ -1,4 +1,4 @@
-import { fetchActivities } from "../services/favoritesService";
+import { fetchFavorites } from "../services/favoritesService";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SearchBar from "../SearchBar";
@@ -12,7 +12,7 @@ export default function Favorites(props) {
 
   useEffect(() => {
     const getData=async()=>{
-        const fetchedData=await fetchActivities();
+        const fetchedData=await fetchFavorites();
         setData(fetchedData);
         }
         getData();

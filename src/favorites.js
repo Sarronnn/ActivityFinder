@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 export default function Favorites(term) {
   const [favorite, setFavorite] = useState([]);
   const addToFavorite = (id) => {
